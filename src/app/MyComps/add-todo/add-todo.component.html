@@ -1,0 +1,12 @@
+<form (ngSubmit)="onSubmit()" #addTodoForm = "ngForm">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="title" name="title" required>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Description</label>
+      <input type="text" class="form-control" id="description" [(ngModel)]="description" name="description" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!addTodoForm.valid" (mousedown)="down1()" (window:mouseup)="up1()" >Add</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!addTodoForm.valid" (mousedown)="down2()" (window:mouseup)="up2()" >Add2</button>
+</form>
